@@ -66,8 +66,8 @@ function Chatroom() {
     return (
         <div className="flex flex-col w-screen h-screen">
 
-            <div className="right-0 bg-black w-full flex justify-between items-center p-2">
-                <span className="text-white text-lg font-extrabold">CHAT BOX</span>
+            <div className="right-0 bg-black w-full flex justify-between items-center p-6">
+                <span className="text-white text-3xl font-extrabold">ENCRYPTO</span>
                 <button onClick={() => router.replace('/')} className="bg-red-500 text-white text-sm font-bold rounded px-2 py-2">Leave Chat</button>
             </div>
 
@@ -75,10 +75,10 @@ function Chatroom() {
                 <Members />
                 <div className="relative h-full w-3/4 flex flex-col">
 
-                    <div className="flex-grow overflow-y-auto px-4">
+                    <div className="flex-grow overflow-y-auto px-4 my-4">
                         {messages.map((msg, index) => (
                             <div key={index} className={`mb-2 ${msg.username === username ? 'text-right' : 'text-left'}`}>
-                                <span className={`inline-block p-2 rounded-lg ${msg.username === username ? 'bg-blue-500 text-white' : 'bg-gray-300 text-black'}`}>
+                                <span className={`inline-block p-2 rounded-lg ${msg.username === username ? 'bg-black text-white' : 'bg-gray-300 text-black'}`}>
                                     {msg.text}
                                 </span>
                             </div>
